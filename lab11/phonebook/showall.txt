@@ -1,0 +1,9 @@
+SELECT
+    contacts.contact_id,
+    contacts.first_name,
+    phone_numbers.phone_id,
+    phone_numbers.phone_number
+FROM contacts
+LEFT JOIN phone_numbers
+    ON contacts.contact_id = phone_numbers.contact_id
+ORDER BY contacts.contact_id;
